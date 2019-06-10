@@ -15,21 +15,24 @@ public class NumberWizard : MonoBehaviour
         Debug.Log("Pick a number...");
         Debug.Log("Highest number is: " + max);
         Debug.Log("Lowest is: " + min);
-        Debug.Log("Tell me if its higher or lower....");
-        Debug.Log("Push up = higher, push down = lower");
+        Debug.Log("Tell me if its higher or lower than....  " + guess);
+        Debug.Log("Push up arrow = higher, push down arrow = lower");
+        max += 1;
     }
 
 
     // Update is called once per frame
     void Update(){
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            Debug.Log("Up Arrow key was pressed.");
             min = guess;
+            guess = (max + min) / 2;
+            Debug.Log("number is lower");
             Debug.Log(guess);
         }
         else if(Input.GetKeyDown(KeyCode.DownArrow)) {
-            Debug.Log("Down Arrow key was pressed.");
             max = guess;
+            guess = (max + min) / 2;
+            Debug.Log("number is higher");
             Debug.Log(guess);
         }
         else if (Input.GetKeyDown(KeyCode.Return)){
