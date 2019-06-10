@@ -5,12 +5,14 @@ using UnityEngine;
 public class NumberWizard : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
+        int max = 1000;
+        int min = 1;
+
         Debug.Log("Welcome to Number wizard, yo");
         Debug.Log("Pick a number...");
-        Debug.Log("Highest number is 1000");
-        Debug.Log("Lowest is 1");
+        Debug.Log("Highest number is: " + max);
+        Debug.Log("Lowest is: " + min);
     }
 
     // Update is called once per frame
